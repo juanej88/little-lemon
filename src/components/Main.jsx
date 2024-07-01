@@ -1,7 +1,13 @@
+import Highlights from './Highlights';
+import Testimonials from './Testimonials';
+import About from './About';
+
 const Main = () => {
   return (
     <main>
-      Main Component
+      <Highlights />
+      <Testimonials />
+      <About />
     </main>
   );
 };

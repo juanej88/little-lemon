@@ -1,0 +1,35 @@
+.special-card {
+  background-color: #EDEFEE;
+  border-radius: 5px 5px 0 0;
+}
+
+.special-img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+}
+
+.name-price {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+}
+
+.special-card span {
+  color: #EE9972;
+}
+
+.special-card p {
+  padding: 1rem;
+}
+
+.bell-container {
+  display: flex;
+  align-items: center;
+  padding-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.bell-icon {
+  width: 1.25rem;
+  margin-left: 1rem;
+}
