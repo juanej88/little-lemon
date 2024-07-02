@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Links from './Links';
 import '../assets/styles/Footer.css';
 import footerImg from '../assets/icons/restaurant.jpg';
@@ -5,12 +6,20 @@ import footerImg from '../assets/icons/restaurant.jpg';
 const Footer = () => {
   const contactLinks = ['Address', 'Phone Number', 'Email'];
   const getContactLinks = contactLinks.map((item, idx) => {
-    return <li key={idx}><a href={`/${item.toLowerCase()}`}>{item}</a></li>
+    return (
+      <li key={idx}>
+        <Link to='/'>{item}</Link>
+      </li>
+    );
   });
 
   const socialLinks = ['Facebook', 'Instagram', 'Twitter'];
   const getSocialLinks = socialLinks.map((item, idx) => {
-    return <li key={idx}><a href={`/${item.toLowerCase()}`}>{item}</a></li>
+    return (
+      <li key={idx}>
+        <Link to='/'>{item}</Link>
+      </li>
+    );
   });
 
   return (

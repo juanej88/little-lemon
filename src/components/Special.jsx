@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import '../assets/styles/Special.css';
 import  dishIcon from '../assets/icons/Dish icon.svg';
 
@@ -10,10 +11,10 @@ const Special = (props) => {
         <span>${props.dish.price}</span>
       </div>
       <p>{props.dish.description}</p>
-      <a className='bell-container' href='./order'>
+      <Link to='/' className='bell-container'>
         Order a delivery
         <img className='bell-icon' src={dishIcon} alt='dish icon' />
-      </a>
+      </Link>
     </aside>
   );
 };

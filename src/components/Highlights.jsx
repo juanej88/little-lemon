@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Special from './Special';
 import '../assets/styles/Highlights.css';
 import greekSalad from '../assets/icons/greek salad.jpg';
@@ -34,7 +35,7 @@ const Highlights = () => {
     <section id='highlights'>
       <article>
         <h2>This weeks specials!</h2>
-        <a className='btn' role='button' href='./order'>Online Menu</a>
+        <Link to='/' className='btn'>Online Menu</Link>
       </article>
       {getDishes()}
     </section>
