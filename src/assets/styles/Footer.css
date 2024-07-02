@@ -1,0 +1,46 @@
+footer {
+  margin-top: 2rem;
+  padding: 2rem 0.5rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  background-color: #EDEFEE;
+}
+
+footer > img {
+  grid-column: span 2;
+  width: 100%;
+}
+
+footer > section {
+  grid-column: span 2;
+}
+
+@media only screen and (min-width: 768px) {
+  footer {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  footer {
+    grid-template-columns: repeat(12, 1fr);
+  }
+  
+  footer > img {
+    grid-column: 3 / span 2;
+  }
+  
+  #about > aside {
+    grid-column: span 4;
+  }
+
+  #chefsA {
+    grid-area: 1 / 1 / span 3 / span 3;
+    z-index: 1;
+  }
+
+  #chefsB {
+    grid-area: 3 / 3 / span 2 / span 2;
+  }
+}

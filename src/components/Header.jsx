@@ -7,7 +7,7 @@ const Header = () => {
       <article>
         <h1 className='markazi'>Little Lemon</h1>
         <span className='markazi'>Chicago</span>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+        <p>Welcome to Little Lemon, a family-owned Mediterranean restaurant where we blend tradition with innovation to create unforgettable dining experiences.</p>
         <a className='btn' role='button' href='./reservations'>Reserve a Table</a>
       </article>
       <aside>

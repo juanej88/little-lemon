@@ -1,4 +1,5 @@
 import Links from './Links';
+import '../assets/styles/Footer.css';
 import footerImg from '../assets/icons/restaurant.jpg';
 
 const Footer = () => {
@@ -16,7 +17,6 @@ const Footer = () => {
     <footer>
       <img 
         src={footerImg} 
-        style={{width: '250px'}} 
         alt='Little Lemon balcony' 
       />
       <section>
