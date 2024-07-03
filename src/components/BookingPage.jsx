@@ -1,10 +1,10 @@
 import { useState, useReducer, useEffect } from 'react';
+import { fetchAPI } from '../API/API';
 import BookingForm from './BookingForm';
 
 const reducer = (state, action) => {
-  console.log(state, action);
   if(action.type === 'updateTimes') {
-    return {...state, times: ['17:00', '18:00', '19:00', '20:00', '21:00', '22:00']};
+    return {...state, times: action.APITimes};
   } else {
     return 'Error';
   }
@@ -13,13 +13,16 @@ const reducer = (state, action) => {
 const BookingPage = (props) => {
   const [details, setDetails] = useState({
     date: '',
-    time: '',
+    time: '17:00',
     guests: 0,
     occasion: ''
   });
   const updateDetails = e => {
     // It needs to get updated with the API
-    if(e.target.name === 'date') updateTimes();
+    if(e.target.name === 'date') {
+      const APIData = fetchAPI(new Date(e.target.value));
+      updateTimes(APIData);
+    };
 
     setDetails({
       ...details,
@@ -27,10 +30,11 @@ const BookingPage = (props) => {
     });
   };
   
-  const initialiseTimes = {times: ['17:00']};
-  const [availableTimes, dispatch] = useReducer(reducer, initialiseTimes);
-  const updateTimes = () => dispatch({type: 'updateTimes'});
-  
+  const initialTime = {times: ['17:00']};
+
+  const [availableTimes, dispatch] = useReducer(reducer, initialTime);
+  const updateTimes = (data) => dispatch({type: 'updateTimes', APITimes: data});
+
   useEffect(() => {
     console.log(details);
   }, [details]);

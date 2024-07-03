@@ -16,7 +16,8 @@ const BookingForm = (props) => {
         id='res-date' 
         name='date' 
         onChange={props.updateDetails}
-        value={props.details.date} 
+        value={props.details.date}
+        required
       />
       
       <label htmlFor='res-time'>Choose time</label>
@@ -25,6 +26,7 @@ const BookingForm = (props) => {
         name='time' 
         onChange={props.updateDetails} 
         value={props.details.time}
+        required
       >
           {getAvailableTimes}
       </select>
@@ -38,7 +40,8 @@ const BookingForm = (props) => {
         id='guests'
         name='guests' 
         onChange={props.updateDetails} 
-        value={props.details.guests} 
+        value={props.details.guests}
+        required
       />
 
       <label htmlFor='occasion'>Occasion</label>
@@ -47,6 +50,7 @@ const BookingForm = (props) => {
         name='occasion' 
         onChange={props.updateDetails} 
         value={props.details.occasion}
+        required
       >
           <option></option>
           <option>Birthday</option>

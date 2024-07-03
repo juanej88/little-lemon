@@ -24,7 +24,7 @@ describe('Booking Form', () => {
   });
 
   test('Updates the availableTimes when the date input changes', () => {
-    const time = '20:00';
+    const time = '21:00';
     render(<BookingPage />);
     
     const dateInput = screen.getByLabelText(/Choose date/);
