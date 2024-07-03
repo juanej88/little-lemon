@@ -1,0 +1,31 @@
+.booking-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0 0.5rem 2rem;
+}
+
+.booking-details {
+  grid-column: span 4;
+  font-size: 1.25rem;
+  padding-top: 2rem;
+}
+
+@media only screen and (min-width: 768px) {
+  .booking-container {
+    grid-template-columns: repeat(8, 1fr);
+  }
+
+  .booking-details {
+    grid-column: 2 / span 6;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .booking-container {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .booking-details {
+    grid-column: 3 / span 8;
+  }
+}

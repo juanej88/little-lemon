@@ -37,6 +37,14 @@ ul {
 a {
   text-decoration: none;
   color: black;
+  padding: 0.5rem;
+}
+
+li:nth-child(1) a:hover, li:nth-child(4) a:hover {
+  background-color: #495E57;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 768px) {
@@ -59,7 +67,7 @@ a {
     align-items: center;
   }
 
-  nav > .links > li {
+  nav > .links > a {
     padding: 0.5rem;
   }
 }
@@ -78,7 +86,7 @@ a {
     grid-area: 1 / 5 / span 1 / span 6;
   }
 
-  nav > .links > li {
+  nav > .links > a {
     padding: 0.75rem;
   }
 }

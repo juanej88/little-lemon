@@ -1,6 +1,7 @@
 import { useState, useReducer, useEffect } from 'react';
 import { fetchAPI } from '../API/API';
 import BookingForm from './BookingForm';
+import headerImg from '../assets/icons/restaurant.jpg';
 
 const reducer = (state, action) => {
   if(action.type === 'updateTimes') {
@@ -42,8 +43,16 @@ const BookingPage = (props) => {
   return (
     <>
       <header>
-        <h1>Book a Table</h1>
+        <article>
+          <h1 className='markazi'>Book a Table</h1>
+          <span className='markazi'>Please fill in the details below</span>
+          <p>Once submitted, we will be happy to arrange your table on the date and time you request.</p>
+        </article>
+        <aside>
+          <img className='header-img' src={headerImg} alt='4 panini' />
+        </aside>
       </header>
+      
       <main>
         <BookingForm details={details} updateDetails={updateDetails} availableTimes={availableTimes} onSubmit={props.onSubmit} />
       </main>

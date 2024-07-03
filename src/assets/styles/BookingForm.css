@@ -1,0 +1,26 @@
+form {
+  padding-top: 2rem;
+  display: grid;
+  gap: 20px;
+  max-width: 200px;
+}
+
+input, select {
+  width: 150px;
+  text-align: center;
+  color: black;
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+form button {
+  cursor: pointer;
+  border: none;
+  color: black;
+}
+
+form button:disabled {
+  cursor: not-allowed;
+  color: #b0951b;
+}

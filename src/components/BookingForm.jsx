@@ -1,3 +1,6 @@
+import { useEffect, useState } from 'react';
+import '../assets/styles/BookingForm.css';
+
 const BookingForm = (props) => {
   const getAvailableTimes = props.availableTimes.times.map(time => {
     return <option key={time}>{time}</option>
@@ -8,8 +11,17 @@ const BookingForm = (props) => {
     props.onSubmit(props.details);
   };
 
+  const [isDisabled, setIsDisabled] = useState(true);
+
+  useEffect(() => {
+    const {date, time, guests, occasion} = props.details;
+    date && time && guests >= 1 && guests <= 10 && occasion ?
+    setIsDisabled(false) :
+    setIsDisabled(true);
+  }, [props.details]);
+
   return (
-    <form style={{display: 'grid', maxWidth: '200px', gap: '20px'}} onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <label htmlFor='res-date'>Choose date</label>
       <input 
         type='date' 
@@ -31,7 +43,7 @@ const BookingForm = (props) => {
           {getAvailableTimes}
       </select>
 
-      <label htmlFor='guests'>Number of guests</label>
+      <label htmlFor='guests' inputMode='numeric'>Number of guests</label>
       <input 
         type='number' 
         placeholder='1' 
@@ -56,9 +68,7 @@ const BookingForm = (props) => {
           <option>Birthday</option>
           <option>Anniversary</option>
       </select>
-      
-      {/* <input type='submit' role='button' value='Make Your Booking' /> */}
-      <button className='btn'>Make Your Booking</button>
+      <button className='btn' disabled={isDisabled}>Make Your Booking</button>
     </form>
   );
 };
