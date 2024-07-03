@@ -15,8 +15,8 @@ const Links = () => {
       link: '/'
     },
     {
-      name: 'Reservations',
-      link: '/reservations'
+      name: 'Book a Table',
+      link: '/booking'
     },
     {
       name: 'Order Online',

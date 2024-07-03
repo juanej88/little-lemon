@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import Links from './Links';
 import '../assets/styles/Nav.css';
 import logo from '../assets/icons/Logo.svg';
-import hamburgerMenu from '../assets/icons/🦆 icon _hamburger menu.svg';
-
+import hamburgerMenu from '../assets/icons/icon_hamburger_menu.svg';
+// 
 const Nav = () => {
   return (
     <nav>
